@@ -1,0 +1,25 @@
+package collection;
+import java.util.*;
+public class vampire {
+    public static void main(String[] args) {
+        String str = "073212";
+        int[] arr = new int[str.length()];
+        for (int i = 0; i < str.length(); i++) {
+            arr[i] = str.charAt(i)-'0';
+        }
+int max=arr[0];
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]>max)
+                max=arr[i];
+        }
+        int sum=0;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]!=max)
+                sum=sum+arr[i];
+        }
+        if(max>sum)
+            System.out.println(max);
+        else
+            System.out.println("not");
+    }
+}
